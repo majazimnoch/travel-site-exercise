@@ -1,7 +1,7 @@
 const Navbar = () => {
     return (
         <header>
-            <p>ssbnhhcc</p>
+            <h3>Scandinavian Adventures</h3>
         </header>
     );
 };
