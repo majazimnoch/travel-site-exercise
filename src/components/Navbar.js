@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import iconBars from '../assets/Hamburger.svg';
 import iconClose from '../assets/Close.svg';
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 const Navbar = () => {
     const navRef = useRef();
