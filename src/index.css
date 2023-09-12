@@ -24,6 +24,10 @@ code {
   font-family: 'Mulish', sans-serif;
 }
 
+p {
+  font-size: 30px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -31,6 +35,9 @@ header {
   height: 80px;
   padding: 0 2rem;
   background-color: var(--mainColorLighter);
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Adjust as needed */
 }
 
 nav a {

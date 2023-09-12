@@ -1,19 +1,23 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import iconBars from '../assets/Hamburger.svg';
 import iconClose from '../assets/Close.svg';
 import styled from 'styled-components'
 
 const Navbar = () => {
     const navRef = useRef();
+    const [isOpen, setIsOpen] = useState(false);
 
+    // const showNavbar = () => {
+    //     navRef.current.classList.toggle("responsive_nav");
+    // }
     const showNavbar = () => {
-        navRef.current.classList.toggle("responsive_nav");
-    }
+        setIsOpen(!isOpen);
+    };
 
     return (
         <header>
             <h3>Scandinavian Adventures</h3>
-            <nav ref={navRef}>
+            <nav className={isOpen ? 'responsive_nav' : ''} ref={navRef}>
                 <a href="/experiences">Experiences</a>
                 <a href="/company">Company</a>
                 <a href="/support">Support</a>
