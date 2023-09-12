@@ -3,6 +3,7 @@ import './NavbarStyling.css';
 import iconBars from '../assets/Hamburger.svg';
 import iconClose from '../assets/Close.svg';
 import iconBasket from '../assets/emptybasket.svg'
+import { StyledH3 } from './Header';
 
 const Navbar = () => {
     const navRef = useRef();
@@ -17,7 +18,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <h3><a href="./">Scandinavian Adventures</a></h3>
+            <StyledH3 nav><a href="./">Scandinavian Adventures</a></StyledH3>
             <div className="nav-container">
                 <nav className={isOpen ? 'responsive_nav' : ''} ref={navRef}>
                 <a href="/experiences">Experiences</a>

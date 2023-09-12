@@ -1,5 +1,5 @@
 import pictureHero from '../assets/heroimage.svg';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from './Button';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
             <StyledTextHeroBox>
                 <StyledH3>Gothenburg winter guided tours</StyledH3>
                 <StyledP>from £65 per person </StyledP>
-                <Button>Book</Button>
+                <Button>Book experience</Button>
             </StyledTextHeroBox>
           </StyledHeroContainer>
         </>
@@ -42,20 +42,45 @@ display:flex;
 flex-direction:column;
 gap: 1rem;
 padding: 19.94px;
+width: 300px;
+
 
 @media (min-width: 1024px) {
     padding: 70px;
+    width: 1280px;
+    flex-shrink: 0;
 }
 `
 
-const StyledH3 = styled.h3`
+export const StyledH3 = styled.h3`
+color: #FFF;
+font-family: Mulish;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 23px; /* 127.778% */
+letter-spacing: 1.636px;
+
+${(styling) => styling.nav && css`
+color: #000;
+font-family: Fahkwang;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 128.571% */
+letter-spacing: 1.273px;
+`}
+
+@media (min-width: 1024px) {
+color: #FFF;
 font-family: Fahkwang;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
-line-height: 23px; 
+line-height: 23px; /* 127.778% */
 letter-spacing: 1.636px;
-color: #FFF;
+}
+
 `
 
 const StyledP = styled.p`
@@ -64,6 +89,16 @@ font-family: Mulish;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
-line-height: 18px;
+line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
+
+@media (min-width: 1024px) {
+color: #FFF;
+font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 128.571% */
+letter-spacing: 1.273px;
+}
 `
