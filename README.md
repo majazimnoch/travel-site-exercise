@@ -68,3 +68,7 @@ https://travel-site-maja.netlify.app/
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Problems
+I added redirects file to the public folder in order to fix  redirections url and routing.

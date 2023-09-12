@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import './NavbarStyling.css';
 import iconBars from '../assets/Hamburger.svg';
 import iconClose from '../assets/Close.svg';
 // import styled from 'styled-components'
