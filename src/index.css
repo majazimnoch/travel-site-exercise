@@ -16,7 +16,9 @@ body {
 }
 
 :root {
-  --mainColor: black;
+  --mainColor: #FFFFFF;
+  --mainText: #000000;
+  --mainTextLight: #222222;
   --mainColorLighter: gray;
 }
 code {
@@ -24,6 +26,3 @@ code {
   font-family: 'Mulish', sans-serif;
 }
 
-p {
-  font-size: 30px;
-}

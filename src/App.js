@@ -5,12 +5,14 @@ import Experiences from './components/NavComponents/Experiences';
 import Support from './components/NavComponents/Support';
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
+import Header from './components/Header';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar />
+        <Header />
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/experiences" element={<Experiences />} />

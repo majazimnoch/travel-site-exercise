@@ -3,16 +3,29 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    padding: 0 2rem;
-    background-color: var(--mainColorLighter);
+    padding: 0rem;
+    background-color: var(--mainColor);
     position: sticky;
     top: 0;
-    z-index: 1000; /* Adjust as needed */
-  }
+    z-index: 1000; 
+    flex-shrink: 0;
   
-  nav a {
+  }
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav a,
+  header a {
     margin: 0 2rem;
-    color: var(--mainColor);
+    color: var(--mainTextLight);
     text-decoration: none;
   }
   
@@ -26,7 +39,7 @@ header {
     background-color: transparent;
     border: none;
     outline: none;
-    color: black;
+    color: var(--mainText);
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
@@ -36,6 +49,10 @@ header {
     header .nav-btn {
       visibility: visible;
       opacity: 1;
+    }
+
+    header .fix {
+     margin-right: 2rem;
     }
   
     header nav {
@@ -49,7 +66,7 @@ header {
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
-      background-color: var(--mainColorLighter);
+      background-color: var(--mainColor);
       transition: 1s;
       transform: translateY(-100vh);
     }
