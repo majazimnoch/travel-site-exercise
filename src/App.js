@@ -6,6 +6,7 @@ import Support from './components/NavComponents/Support';
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Header from './components/Header';
+import Middle from './components/Middle';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Header />
+        <Middle />
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/experiences" element={<Experiences />} />

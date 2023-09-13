@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
     width: 201px;
@@ -17,5 +17,13 @@ export const Button = styled.button`
 
     &:hover {
     }
+
+    ${(styling) => styling.blackbackground && css`
+    background-color:#000;
+    color: #FFF;`}
+
+    ${(styling) => styling.block && css`
+    display: block;
+    width:100%;`}
     `
 export default Button;

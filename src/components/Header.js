@@ -82,8 +82,7 @@ letter-spacing: 1.636px;
 }
 
 `
-
-const StyledP = styled.p`
+export const StyledP = styled.p`
 color: #FFF;
 font-family: Mulish;
 font-size: 14px;
@@ -101,4 +100,7 @@ font-weight: 400;
 line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
 }
+
+${(styling) => styling.black && css}
+color: #222222;
 `
