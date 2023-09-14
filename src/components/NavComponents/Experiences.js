@@ -7,8 +7,13 @@ const Experiences = () => {
       <FooterWrapper>
       <p>Website made by Maja Zimnoch.</p>
       <IconsDiv>
-         <StyledImg src={GitIcon} alt="Git icon" />
-         <StyledImg src={LiIcon} alt="LinkedIn icon" />
+
+         <a href="https://github.com/majazimnoch" target="_blank" rel="noopener noreferrer">
+          <StyledImg src={GitIcon} alt="Git icon" /></a>
+
+         <a href="https://www.linkedin.com/in/majazimnoch/" target="_blank" rel="noopener noreferrer">
+          <StyledImg src={LiIcon} alt="LinkedIn icon" /></a>
+          
       </IconsDiv>
       <p>Design & Concept by AKQA. This is a coding task. September 2023</p>
     </FooterWrapper>
