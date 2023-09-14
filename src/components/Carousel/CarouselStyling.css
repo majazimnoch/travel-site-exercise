@@ -5,7 +5,7 @@
     background-size: cover;
     height: 173px;
     flex-shrink: 0;
-    margin: 0 15px;
+    margin: 0 20px;
   }
   
 /* > div specifies that the rule applies to direct children of elements with the class each-slide-effect that are also div elements */

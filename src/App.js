@@ -5,14 +5,16 @@ import Experiences from './components/NavComponents/Experiences';
 import Support from './components/NavComponents/Support';
 import Welcome from './components/Welcome';
 import Middle from './components/Middle';
-import Top from './components/Top';
 import Carousel from './components/Carousel/Carousel';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Top />
+        <Navbar />
+        <Header />
         <Middle />
         <Carousel />
         <Routes>
