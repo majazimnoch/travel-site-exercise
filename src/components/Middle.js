@@ -15,7 +15,7 @@ const Content = [
 const Middle = () => {
     return (
         <MiddleWrapper>
-            <div>
+            <MiddlePictureBox>
                 <PictureForest>
                     <StyledH3>Moose safari in Central Sweden</StyledH3>
                 </PictureForest>
@@ -30,22 +30,21 @@ const Middle = () => {
                     <StyledP>From £150 per person</StyledP>
                 </PContainer>
                 <Button blackbackground block>Book experience</Button>
-            </div>
-            <div>
+            </MiddlePictureBox>
+            <MiddlePictureBoxBelow>
                 <PictureForest secondpicture longtext>
                     <StyledH3>Brunch at the archipelagos of Gothenburg</StyledH3>
                 </PictureForest>
                 <LiContainer>
                     <StyledP black>
                     Join a guided boat tour in the archipelago. M/S S:t Erik departs from Lilla Bommen and takes you through the Gothenburg harbor, past the Älvsborg Fortress and down towards the islands of Gothenburg archipelago. Enjoy a lovely boat sightseeing tour in the beautiful archipelago of Gothenburg. During the summer you can join the prestigious M/S S:t Erik on a guided cruise through the archipelago.
-
                     </StyledP>
                 </LiContainer>
                 <PContainer>
                     <StyledP>From £45 per person</StyledP>
                 </PContainer>
                 <Button blackbackground block>Book experience</Button>
-            </div>
+            </MiddlePictureBoxBelow>
             
         </MiddleWrapper>
     );
@@ -58,6 +57,17 @@ display: flex;
 flex-direction: column;
 margin: 40px 20px;
 gap: 40px;
+
+@media (min-width: 1024px) {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+gap: 20px;
+margin: 40px;
+
+}
 `
 const PictureForest= styled.section`
 background-image: url(${pictureForest});
@@ -86,4 +96,25 @@ list-style: none;`
 const PContainer = styled.div`
 padding: 10px 20px 19px 20px;
 margin-bottom: 16px;
+`
+const MiddlePictureBox = styled.div`
+
+display: flex;
+flex-direction: column;
+border:1px red solid;
+
+@media (min-width: 1024px) {
+    grid-area: 1 / 1 / 2 / 3;
+    justify-content: space-between;
+}
+`
+const MiddlePictureBoxBelow = styled.div`
+display: flex;
+flex-direction: column;
+
+@media (min-width: 1024px) {
+    grid-area: 1 / 3 / 2 / 6;
+    border:1px red solid;
+    justify-content: space-between;
+}
 `

@@ -44,7 +44,6 @@ gap: 1rem;
 padding: 19.94px;
 width: 300px;
 
-
 @media (min-width: 1024px) {
     padding: 70px;
     width: 1280px;
@@ -91,6 +90,9 @@ font-weight: 400;
 line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
 
+${(styling) => styling.black && css}
+color: #222222;
+
 @media (min-width: 1024px) {
 color: #FFF;
 font-family: Mulish;
@@ -100,7 +102,4 @@ font-weight: 400;
 line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
 }
-
-${(styling) => styling.black && css}
-color: #222222;
 `
