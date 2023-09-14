@@ -1,10 +1,46 @@
+import styled from 'styled-components';
+import GitIcon from '../../assets/githubb.png';
+import LiIcon from '../../assets/linkedinb.png';
+
 const Company = () => {
     return (
-       <article>
-         <h1>Company</h1>
-         <p>...</p>
-       </article>
+      <FooterWrapper>
+      <p>Website made by Maja Zimnoch.</p>
+      <IconsDiv>
+         <StyledImg src={GitIcon} alt="Git icon" />
+         <StyledImg src={LiIcon} alt="LinkedIn icon" />
+      </IconsDiv>
+      <p>Design & Concept by AKQA. This is a coding task. September 2023</p>
+    </FooterWrapper>
     )
 }
 
 export default Company;
+
+const FooterWrapper = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 25px;
+font-family: Mulish;
+font-size: 14px;
+gap: 7px;
+`
+
+const IconsDiv = styled.div`
+display: flex;
+flex-direction: row;
+gap: 15px;
+`
+
+const StyledImg = styled.img`
+height: 20px;
+transition: transform .1s;
+
+&:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+`

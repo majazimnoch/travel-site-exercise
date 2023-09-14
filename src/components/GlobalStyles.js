@@ -20,6 +20,17 @@ line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
 `}
 
+${(styling) => styling.gray && css`
+color: #222;
+text-align: center;
+font-family: Mulish;
+font-size: 18px;
+font-style: normal;
+font-weight: 900;
+line-height: 23px; /* 127.778% */
+letter-spacing: 1.636px;
+`}
+
 @media (min-width: 1024px) {
 color: #FFF;
 font-family: Fahkwang;
@@ -75,4 +86,25 @@ font-weight: 400;
 line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
 }
+`
+
+export const StyledGrayHeader = styled.h3`
+color: #222;
+text-align: center;
+font-family: Mulish;
+font-size: 18px;
+font-style: normal;
+font-weight: 900;
+line-height: 23px; /* 127.778% */
+letter-spacing: 1.636px;
+`
+export const StyledGrayP = styled.p`
+color: #222;
+text-align: center;
+font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 128.571% */
+letter-spacing: 1.273px;
 `

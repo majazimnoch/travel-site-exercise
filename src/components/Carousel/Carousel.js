@@ -7,11 +7,12 @@ import Carousel3 from '../../assets/carousel-3.png';
 import Carousel4 from '../../assets/carousel-4.png';
 import Button from '../Button';
 import styled from 'styled-components';
-import { StyledPHeader } from '../GlobalStyles';
+import { StyledGrayHeader, StyledGrayP, StyledH3, StyledP, StyledPHeader } from '../GlobalStyles';
 
 const DesktopView = styled.div`
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 `
 
 const Carousel = () => {
@@ -21,7 +22,12 @@ const Carousel = () => {
 
     if (isDesktop) {
         return (
-            <DesktopView>
+            <GrayBox>
+                <GrayBoxTextBox>
+                    <StyledGrayHeader gray>Adventure awaits out there</StyledGrayHeader>
+                    <StyledGrayP>Get out and expreience Scandinavian way of living</StyledGrayP>
+                </GrayBoxTextBox>   
+               <DesktopView>
                <div className="each-slide-effect">
                     <div style={{ 'backgroundImage': `url(${images[0]})` }}>
                     </div>
@@ -58,50 +64,57 @@ const Carousel = () => {
                         <Button block space>Book Experience</Button>
                     </BackgroundSlider>
                 </div>
-            </DesktopView>
+                </DesktopView>
+            </GrayBox>
         )
     }
 
     return (
         <>
+        <GrayBox>
+            <GrayBoxTextBox>
+                <StyledH3 gray>Adventure awaits out there</StyledH3>
+                <StyledP>Get out and expreience Scandinavian way of living</StyledP>
+            </GrayBoxTextBox>
             <Slide>
-                <div className="each-slide-effect">
-                    <div style={{ 'backgroundImage': `url(${images[0]})` }}>
+                    <div className="each-slide-effect">
+                        <div style={{ 'backgroundImage': `url(${images[0]})` }}>
+                        </div>
+                        <BackgroundSlider>
+                            <StyledH4>Stockholm archipelago</StyledH4>
+                            <StyledPHeader>From £50 per person</StyledPHeader>
+                            <Button block space>Book Experience</Button>
+                        </BackgroundSlider>
                     </div>
-                    <BackgroundSlider>
-                        <StyledH4>Stockholm archipelago</StyledH4>
-                        <StyledPHeader>From £50 per person</StyledPHeader>
-                        <Button block space>Book Experience</Button>
-                    </BackgroundSlider>
-                </div>
-                <div className="each-slide-effect">
-                    <div style={{ 'backgroundImage': `url(${images[1]})` }}>
+                    <div className="each-slide-effect">
+                        <div style={{ 'backgroundImage': `url(${images[1]})` }}>
+                        </div>
+                        <BackgroundSlider>
+                            <StyledH4>Destination Stockholm</StyledH4>
+                            <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
+                            <Button block space>Book Experience</Button>
+                        </BackgroundSlider>
                     </div>
-                    <BackgroundSlider>
-                        <StyledH4>Destination Stockholm</StyledH4>
-                        <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
-                        <Button block space>Book Experience</Button>
-                    </BackgroundSlider>
-                </div>
-                <div className="each-slide-effect">
-                    <div style={{ 'backgroundImage': `url(${images[2]})` }}>
+                    <div className="each-slide-effect">
+                        <div style={{ 'backgroundImage': `url(${images[2]})` }}>
+                        </div>
+                        <BackgroundSlider>
+                            <StyledH4>Southern Sweden</StyledH4>
+                            <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
+                            <Button block space>Book Experience</Button>
+                        </BackgroundSlider>
                     </div>
-                    <BackgroundSlider>
-                        <StyledH4>Southern Sweden</StyledH4>
-                        <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
-                        <Button block space>Book Experience</Button>
-                    </BackgroundSlider>
-                </div>
-                <div className="each-slide-effect">
-                    <div style={{ 'backgroundImage': `url(${images[3]})` }}>
+                    <div className="each-slide-effect">
+                        <div style={{ 'backgroundImage': `url(${images[3]})` }}>
+                        </div>
+                        <BackgroundSlider>
+                            <StyledH4>Destination Gotland</StyledH4>
+                            <StyledPHeader>From £120 per person</StyledPHeader>
+                            <Button block space>Book Experience</Button>
+                        </BackgroundSlider>
                     </div>
-                    <BackgroundSlider>
-                        <StyledH4>Destination Gotland</StyledH4>
-                        <StyledPHeader>From £120 per person</StyledPHeader>
-                        <Button block space>Book Experience</Button>
-                    </BackgroundSlider>
-                </div>
-            </Slide>
+                </Slide>
+        </GrayBox>
         </>
     );
 };
@@ -124,4 +137,21 @@ display: flex;
 flex-direction: column;
 padding: 30px;
 gap: 10px;
+`
+
+const GrayBox = styled.div`
+background-color: #EFEDED;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+padding: 20px;
+gap: 10px;
+`
+
+const GrayBoxTextBox = styled.div`
+display: flex;
+flex-direction: column;
+padding: 15px;
+gap:10px
 `
