@@ -9,48 +9,100 @@ import Button from '../Button';
 import styled from 'styled-components';
 import { StyledPHeader } from '../GlobalStyles';
 
+const DesktopView = styled.div`
+display: flex;
+flex-direction: row;
+`
+
 const Carousel = () => {
     const images = [Carousel1, Carousel2, Carousel3, Carousel4];
 
+    const isDesktop = window.innerWidth >= 1024;
+
+    if (isDesktop) {
+        return (
+            <DesktopView>
+               <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[0]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Stockholm archipelago</StyledH4>
+                        <StyledPHeader>From £50 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
+                </div>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[1]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Destination Stockholm</StyledH4>
+                        <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
+                </div>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[2]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Southern Sweden</StyledH4>
+                        <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
+                </div>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[3]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Destination Gotland</StyledH4>
+                        <StyledPHeader>From £120 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
+                </div>
+            </DesktopView>
+        )
+    }
+
     return (
-        <Slide>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[0]})` }}>
+        <>
+            <Slide>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[0]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Stockholm archipelago</StyledH4>
+                        <StyledPHeader>From £50 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
                 </div>
-                <BackgroundSlider>
-                    <StyledH4>Stockholm archipelago</StyledH4>
-                    <StyledPHeader>From £50 per person</StyledPHeader>
-                    <Button block space>Book Experience</Button>
-                </BackgroundSlider>
-            </div>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[1]})` }}>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[1]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Destination Stockholm</StyledH4>
+                        <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
                 </div>
-                <BackgroundSlider>
-                    <StyledH4>Stockholm archipelago</StyledH4>
-                    <StyledPHeader>From £50 per person</StyledPHeader>
-                    <Button block space>Book Experience</Button>
-                </BackgroundSlider>
-            </div>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[2]})` }}>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[2]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Southern Sweden</StyledH4>
+                        <StyledPHeader>Guided tours from £50 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
                 </div>
-                <BackgroundSlider>
-                    <StyledH4>Stockholm archipelago</StyledH4>
-                    <StyledPHeader>From £50 per person</StyledPHeader>
-                    <Button block space>Book Experience</Button>
-                </BackgroundSlider>
-            </div>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[3]})` }}>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[3]})` }}>
+                    </div>
+                    <BackgroundSlider>
+                        <StyledH4>Destination Gotland</StyledH4>
+                        <StyledPHeader>From £120 per person</StyledPHeader>
+                        <Button block space>Book Experience</Button>
+                    </BackgroundSlider>
                 </div>
-                <BackgroundSlider>
-                    <StyledH4>Stockholm archipelago</StyledH4>
-                    <StyledPHeader>From £50 per person</StyledPHeader>
-                    <Button block space>Book Experience</Button>
-                </BackgroundSlider>
-            </div>
-        </Slide>
+            </Slide>
+        </>
     );
 };
 
