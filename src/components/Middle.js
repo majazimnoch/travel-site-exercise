@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import pictureForest from '../assets/forest.svg';
 import pictureArchipelago from '../assets/archipelago.svg';
-import { StyledH3, StyledP } from './Header';
+import { StyledH3, StyledP } from './GlobalStyles';
 import Button from './Button';
 
 const Content = [
@@ -61,7 +61,7 @@ gap: 40px;
 @media (min-width: 1024px) {
 display: grid;
 grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(5, 1fr);
+grid-template-rows: 1fr;
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 gap: 20px;
@@ -101,11 +101,10 @@ const MiddlePictureBox = styled.div`
 
 display: flex;
 flex-direction: column;
-border:1px red solid;
 
 @media (min-width: 1024px) {
-    grid-area: 1 / 1 / 2 / 3;
-    justify-content: space-between;
+grid-area: 1 / 1 / 2 / 3;
+justify-content: space-between;
 }
 `
 const MiddlePictureBoxBelow = styled.div`
@@ -113,8 +112,7 @@ display: flex;
 flex-direction: column;
 
 @media (min-width: 1024px) {
-    grid-area: 1 / 3 / 2 / 6;
-    border:1px red solid;
-    justify-content: space-between;
+grid-area: 1 / 3 / 2 / 6;
+justify-content: space-between;
 }
 `

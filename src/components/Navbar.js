@@ -3,7 +3,7 @@ import './NavbarStyling.css';
 import iconBars from '../assets/Hamburger.svg';
 import iconClose from '../assets/Close.svg';
 import iconBasket from '../assets/emptybasket.svg'
-import { StyledH3 } from './Header';
+import { StyledH3 } from './GlobalStyles';
 
 const Navbar = () => {
     const navRef = useRef();

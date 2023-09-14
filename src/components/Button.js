@@ -22,8 +22,21 @@ export const Button = styled.button`
     background-color:#000;
     color: #FFF;`}
 
+    ${(styling) => styling.space && css`
+   margin: 10px 0;
+   `}
+
     ${(styling) => styling.block && css`
     display: block;
-    width:100%;`}
+    width:100%;
+    
+    @media (min-width: 1024px){
+    width: 202px;
+    height: 55px;
+    flex-shrink: 0;
+    margin-left: 20px;
+   }
+   
+   `}
     `
 export default Button;
