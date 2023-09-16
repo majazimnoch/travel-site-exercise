@@ -1,0 +1,9 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Button add">
+<rect id="Rectangle" width="40" height="40" fill="black"/>
+<g id="Group">
+<rect id="Rectangle_2" x="10" y="19" width="20" height="2" fill="white"/>
+<rect id="Rectangle_3" x="21" y="10" width="20" height="2" transform="rotate(90 21 10)" fill="white"/>
+</g>
+</g>
+</svg>

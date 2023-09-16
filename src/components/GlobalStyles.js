@@ -64,6 +64,9 @@ letter-spacing: 1.273px;
 ${(styling) => styling.black && css}
 color: #222222;
 
+${(styling) => styling.bold && css}
+font-weight: 700;
+
 @media (min-width: 1024px) {
 color: #222;
 }
