@@ -5,44 +5,22 @@ import pictureHero from "../assets/heroimage.svg";
 import { StyledH3, StyledP, StyledPBold } from "./GlobalStyles";
 import Button from "./Button";
 import { Content, LiContainer, StyledLi } from "./Middle";
-import React, { useState, useMemo } from "react";
+import React from "react";
+import { useBasket } from "../contexts/basket";
 
 const Book = () => {
-  const [adultCount, setAdultCount] = useState(0);
-  const [childrenCount, setChildrenCount] = useState(0);
-
-  const increaseAdult = () => setAdultCount((adultCount) => adultCount + 1);
-  const increaseChildren = () =>
-    setChildrenCount((childrenCount) => childrenCount + 1);
-
-  const decreaseAdult = () => {
-    setAdultCount((adultCount) => {
-      if (adultCount > 0) {
-        return adultCount - 1;
-      }
-      return adultCount;
-    });
-  };
-
-  const decreaseChildren = () => {
-    setChildrenCount((childrenCount) => {
-      if (childrenCount > 0) {
-        return childrenCount - 1;
-      }
-      return childrenCount;
-    });
-  };
-
-  const changeAdult = (e) => {
-    const value = e.target.value === "" ? 0 : parseInt(e.target.value, 10);
-    if (Number.isNaN(value) || value < 0) return;
-    setAdultCount(value);
-    e.target.value = value;
-  };
-
-  const total = useMemo(() => {
-    return adultCount * 65 + childrenCount * 30;
-  }, [adultCount, childrenCount]);
+  const {
+    adultCount,
+    increaseAdult,
+    decreaseAdult,
+    changeAdult,
+    // childrenCount,
+    // increaseChildren,
+    // decreaseChildren,
+    // changeChildren,
+    total,
+    setBooked,
+  } = useBasket();
 
   return (
     <OverlayWrapper>
@@ -88,9 +66,9 @@ const Book = () => {
                 </SymbolBox>
               </CategoryDiv>
 
-              <StyledPBold>Total £{total}</StyledPBold>
+              <StyledPBold>Total {total}</StyledPBold>
             </TextPartInsideCounting>
-            <Button block space blackbackground>
+            <Button block space blackbackground onClick={() => adultCount > 0 && setBooked(true)}>
               Book Experience
             </Button>
           </CountingBox>
