@@ -43,6 +43,10 @@ font-style: normal;
 font-weight: 600;
 line-height: 23px; /* 127.778% */
 letter-spacing: 1.636px;
+
+${(styling) => styling.blackfont && css`
+color: #000;
+`}
 }
 
 `
