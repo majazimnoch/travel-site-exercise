@@ -10,6 +10,10 @@ font-weight: 700;
 line-height: 23px; /* 127.778% */
 letter-spacing: 1.636px;
 
+${(styling) => styling.blackfont && css`
+color: #000;
+`}
+
 ${(styling) => styling.nav && css`
 color: #000;
 font-family: Fahkwang;
@@ -42,6 +46,17 @@ letter-spacing: 1.636px;
 }
 
 `
+
+export const StyledPBold = styled.p`
+color: #222;
+font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 128.571% */
+letter-spacing: 1.273px;
+`
+
 export const StyledP = styled.p`
 color: #FFF;
 font-family: Mulish;
@@ -63,9 +78,6 @@ letter-spacing: 1.273px;
 
 ${(styling) => styling.black && css}
 color: #222222;
-
-${(styling) => styling.bold && css}
-font-weight: 700;
 
 @media (min-width: 1024px) {
 color: #222;

@@ -25,7 +25,7 @@ const Carousel = () => {
             <GrayBox>
                 <GrayBoxTextBox>
                     <StyledGrayHeader gray>Adventure awaits out there</StyledGrayHeader>
-                    <StyledGrayP>Get out and expreience Scandinavian way of living</StyledGrayP>
+                    <StyledGrayP>Get out and experience Scandinavian way of living</StyledGrayP>
                 </GrayBoxTextBox>   
                <DesktopView>
                <div className="each-slide-effect">
