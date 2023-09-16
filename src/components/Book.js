@@ -112,6 +112,7 @@ const OverlayWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 7px;
+  margin-top:0px;
 `;
 const ImageAndBooking = styled.div`
   margin-bottom: 7px;
