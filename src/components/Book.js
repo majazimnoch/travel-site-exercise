@@ -14,10 +14,10 @@ const Book = () => {
     increaseAdult,
     decreaseAdult,
     changeAdult,
-    // childrenCount,
-    // increaseChildren,
-    // decreaseChildren,
-    // changeChildren,
+    childrenCount,
+    increaseChildren,
+    decreaseChildren,
+    changeChildren,
     total,
     setBooked,
   } = useBasket();
@@ -40,35 +40,44 @@ const Book = () => {
               <CategoryDiv>
                 <StyledP black>Adults</StyledP>
                 <SymbolBox>
-                  <button onClick={decreaseAdult}>
+                  <StyledButtonNumbers onClick={decreaseAdult}>
                     <img src={SubIcon} alt="Icon Minus" />
-                  </button>
-                  <NumberBox>
-                    <input
-                      type="text"
-                      value={adultCount}
-                      onChange={changeAdult}
-                    />
-                  </NumberBox>
-                  <button onClick={increaseAdult}>
+                  </StyledButtonNumbers>
+                  <StyledInput
+                    type="text"
+                    value={adultCount}
+                    onChange={changeAdult}
+                  />
+                  <StyledButtonNumbers onClick={increaseAdult}>
                     <img src={PlusIcon} alt="Icon Plus" />
-                  </button>
+                  </StyledButtonNumbers>
                 </SymbolBox>
               </CategoryDiv>
               <CategoryDiv>
                 <StyledP black>Children</StyledP>
                 <SymbolBox>
-                  <img src={SubIcon} alt="Icon Minus" />
-                  <NumberBox>
-                    <StyledP black>1</StyledP>
-                  </NumberBox>
-                  <img src={PlusIcon} alt="Icon Plus" />
+                  <StyledButtonNumbers onClick={decreaseChildren}>
+                    <img src={SubIcon} alt="Icon Minus" />
+                  </StyledButtonNumbers>
+                  <StyledInput
+                    type="text"
+                    value={childrenCount}
+                    onChange={changeChildren}
+                  />
+                  <StyledButtonNumbers onClick={increaseChildren}>
+                    <img src={PlusIcon} alt="Icon Plus" />
+                  </StyledButtonNumbers>
                 </SymbolBox>
               </CategoryDiv>
 
               <StyledPBold>Total {total}</StyledPBold>
             </TextPartInsideCounting>
-            <Button block space blackbackground onClick={() => adultCount > 0 && setBooked(true)}>
+            <Button
+              block
+              space
+              blackbackground
+              onClick={() => adultCount > 0 && setBooked(true)}
+            >
               Book Experience
             </Button>
           </CountingBox>
@@ -191,13 +200,18 @@ const SymbolBox = styled.div`
   flex-direction: row;
   gap: 10px;
 `;
-const NumberBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 0.9px black solid;
+
+const StyledInput = styled.input`
   width: 80px;
   height: 40px;
   flex-shrink: 0;
+  padding: 10px;
+  border: 0.9px solid #000000;
+  font-size: 16px;
+`;
+
+const StyledButtonNumbers = styled.button`
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
 `;

@@ -9,15 +9,21 @@ import Welcome from "./components/Welcome";
 // import Navbar from './components/Navbar';
 // import Header from './components/Header';
 import Book from "./components/Book";
-import PublicMain from "./components/PublicMain";
 import { BasketProvider } from "./contexts/basket";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Middle from "./components/Middle";
+import Carousel from "./components/Carousel/Carousel";
 
 function App() {
   return (
     <BasketProvider>
       <BrowserRouter>
         <div className="App">
-          <PublicMain />
+          <Navbar />
+          <Header />
+          <Middle />
+          <Carousel />
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/experiences" element={<Experiences />} />
