@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import pictureHero from '../assets/heroimage.svg';
 import styled from 'styled-components';
 import Button from './Button';
@@ -11,7 +12,7 @@ const Header = () => {
             <StyledTextHeroBox>
                 <StyledH3>Gothenburg winter guided tours</StyledH3>
                 <StyledPHeader>from £65 per person </StyledPHeader>
-                <Button>Book experience</Button>
+                <Button><Link to="/book">Book experience</Link></Button>
             </StyledTextHeroBox>
           </StyledHeroContainer>
         </>
