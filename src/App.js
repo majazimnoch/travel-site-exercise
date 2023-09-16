@@ -4,11 +4,6 @@ import Company from "./components/NavComponents/Company";
 import Experiences from "./components/NavComponents/Experiences";
 import Support from "./components/NavComponents/Support";
 import Welcome from "./components/Welcome";
-// import Middle from './components/Middle';
-// import Carousel from './components/Carousel/Carousel';
-// import Navbar from './components/Navbar';
-// import Header from './components/Header';
-import Book from "./components/Book";
 import { BasketProvider } from "./contexts/basket";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -28,8 +23,7 @@ function App() {
             <Route path="/" element={<Welcome />} />
             <Route path="/experiences" element={<Experiences />} />
             <Route path="/company" element={<Company />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="/book" element={<Book />} />
+            <Route path="/support" element={<Support />} />  
           </Routes>
         </div>
       </BrowserRouter>
