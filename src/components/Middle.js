@@ -4,7 +4,7 @@ import pictureArchipelago from '../assets/archipelago.svg';
 import { StyledH3, StyledP } from './GlobalStyles';
 import Button from './Button';
 
-const Content = [
+export const Content = [
     "-Exciting 5-hour tour",
     "-Track and find wild moose",
     "-Hike through boreal forest",
@@ -87,10 +87,14 @@ padding: 15px 30px 15px 20px;
 ${(styling) => styling.secondpicture && css`
 background-image: url(${pictureArchipelago})`}
 `
-const LiContainer = styled.div`
-padding: 20px;`
+export const LiContainer = styled.div`
+padding: 20px;
 
-const StyledLi = styled.li`
+${(styling) => styling.padding && css`
+padding: 0px;`}
+`
+
+export const StyledLi = styled.li`
 list-style: none;`
 
 const PContainer = styled.div`
