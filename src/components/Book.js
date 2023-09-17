@@ -27,7 +27,7 @@ const Book = () => {
       setBooked(true);
       alert("Booking successful! Look for the orange dot in the basket.");
     } else {
-      alert("Please select at least one ticket.");
+      alert("Please select at least one adult ticket.");
   }
 }
 
@@ -42,7 +42,7 @@ const Book = () => {
             <StyledH3 blackfont>
               Gothenburg winter <br /> guided tours
             </StyledH3>
-            <StyledP black>From £65 per person</StyledP>
+            <StyledP black>From £65 per adult / £30 per child below 16. </StyledP>
           </TextPartInsideCounting>
           <CountingBox>
             <TextPartInsideCounting gap>
