@@ -22,6 +22,15 @@ const Book = () => {
     setBooked,
   } = useBasket();
 
+  const windowNotification = () => {
+    if (adultCount > 0) {
+      setBooked(true);
+      alert("Booking successful! Look for the orange dot in the basket.");
+    } else {
+      alert("Please select at least one ticket.");
+  }
+}
+
   return (
     <OverlayWrapper>
       <ImageAndBooking>
@@ -76,7 +85,8 @@ const Book = () => {
               block
               space
               blackbackground
-              onClick={() => adultCount > 0 && setBooked(true)}
+              // onClick={() => adultCount > 0 && setBooked(true)}
+              onClick={windowNotification}
             >
               Book Experience
             </Button>
