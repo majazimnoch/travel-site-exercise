@@ -12,7 +12,7 @@ I took advantage of <b>Intl.NumberFormat()</b> object constructor to format numb
 
 I'm proud of implementing <b>onChange event</b> to the inputs, so the user can type the amount instead of clicking plus and minus icons. 
 
-It was the first time for me working with <b>carousel (slider)</b>. I used the npm package slideshow ( <a href="https://react-slideshow-image.netlify.app/?path=/story/introduction--page"   target="_blank"> available here </a> )
+It was the first time for me working with <b>carousel (slider)</b>. I used the npm package slideshow ( <a href="https://react-slideshow-image.netlify.app/?path=/story/introduction--page"   target="_blank"> available here </a> ).
 
 It was also the first time for me making an <b>overlay effect</b>. If I had more time, I would experiment more with styling of this component, especially with the closing icon and how it coexists with the navbar.
 
