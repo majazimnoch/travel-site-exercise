@@ -48,9 +48,7 @@ ${(styling) => styling.blackfont && css`
 color: #000;
 `}
 }
-
 `
-
 export const StyledPBold = styled.p`
 color: #222;
 font-family: Mulish;
@@ -123,7 +121,7 @@ text-align: center;
 font-family: Mulish;
 font-size: 14px;
 font-style: normal;
-font-weight: 600;
+font-weight: 300;
 line-height: 18px; /* 128.571% */
 letter-spacing: 1.273px;
 `
