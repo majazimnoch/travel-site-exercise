@@ -1,6 +1,6 @@
 ### Description
 
-This is a one-pager, simple travel website with a ticket booking system. I built it using React, couple of hooks and styled components. Website is made according to the design provided in Figma. All assets like photos and icons were given to me for the purpose of this exercise. 
+This is a one-pager, simple travel website with a ticket booking system. I built it using <b>React</b>, couple of <b>hooks</b> and <b>styled components</b>. Website is made according to the design provided in <b>Figma</b>. All assets like photos and icons were given to me for the purpose of this exercise. 
 
 ### Problems & challenges
 
